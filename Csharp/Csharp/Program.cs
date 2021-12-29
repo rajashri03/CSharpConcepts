@@ -13,7 +13,7 @@ while (flag)
             Console.WriteLine("Given Number is:" + num.Numtype);
             break;
         case 2:
-            Console.WriteLine("Select:\n1)Single Ineritance\n2)Hirarchical Inheritance\n");
+            Console.WriteLine("Select:\n1)Single Ineritance\n2)Hirarchical Inheritance\n3)Multilevel Inheritance");
             int op1 = Convert.ToInt16(Console.ReadLine());
             switch (op1)
             {
@@ -30,7 +30,16 @@ while (flag)
                     Rectangle r1 = new Rectangle();
                     r1.CalculateArea();
                     r1.CalculatePerimeter(r1.lenght, r1.sides);
-
+                    break;
+                case 3:
+                    canera c1 = new canera();
+                    Console.WriteLine("Enter Amount you want to invest");
+                    int am = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("For how many years you want to invest");
+                    int year = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Your amount according to canera bank policies after " + year + " years will be " + c1.CaluclateBalnce_canera(am, year));
+                    Console.WriteLine("Your amount according to RBI bank policies after " + year + " years will be " + c1.CalculateBalnce_RBI(am, year));
+                    Console.WriteLine("Your amount according to SBI bank policies after " + year + " years will be " + c1.CalculateBalnce_SBI(am, year));
                     break;
             }
             break;
