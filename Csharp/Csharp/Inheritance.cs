@@ -8,14 +8,11 @@ namespace Csharp
 {
     public class Inheritance  //Base Class
     {
-        protected int a, b;
-        public void Adition()
+        public int a, b;
+        public void Adition(int a,int b)
         {
-          
-            Console.WriteLine("Enter First Number:");
-            a = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Enter Second Number:");
-            b = Convert.ToInt16(Console.ReadLine());
+            this.a = a;
+            this.b = b;
 
         }
     }
